@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light" >
+ 
+  <!-- <a class="navbar-brand" href="#">BlogApp</a> -->
+  <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto ">
+      <li class="nav-item ">
+        <a class="nav-link " routerLink="home" routerLinkActive=""active>Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="createBlog">Create</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="manageBlog">ManageBlog</a>
+      </li>
+    </ul>
+</div>
+</nav>
+<router-outlet></router-outlet>
+
+
+<!-- <div class="topnav">
+  <a class="active" routerLink="home">Home</a>
+  <a routerLink="home">Create Blog</a>
+  <a routerLink="home">Manage Blog</a>
+  <!-- <a href="#about">About</a> -->
+<!-- </div> -->

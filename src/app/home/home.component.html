@@ -1,0 +1,13 @@
+<h2>All Blogs</h2>
+<mat-accordion multi="true" *ngIf="blogs.length > 0">
+    <mat-expansion-panel *ngFor="let blog of blogs">
+        <mat-expansion-panel-header class="title">
+            {{blog.title}}
+        </mat-expansion-panel-header>
+        <p class="description">{{blog.description}}</p>
+        <mat-action-row>
+            <p class="date">{{blog.dateTime | date: 'MMM d, y, h:mm:ss a'}}</p>
+         </mat-action-row>
+    </mat-expansion-panel>
+</mat-accordion>
+<p *ngIf="blogs.length <= 0">No blog Available !!!!!</p>

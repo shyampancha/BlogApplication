@@ -1,0 +1,63 @@
+<mat-card>
+    <h2>My Blog</h2>
+    
+    <form (submit)="onPostAdded(blogForm)" #blogForm="ngForm">
+        <mat-form-field>
+            <input type="text"
+            matInput
+            ngModel
+           name="title" placeholder="Blog Title"
+           #title="ngModel"
+
+           required
+            >
+            <div class="form-text text-danger" *ngIf="title errors['required']"></div>
+        </mat-form-field><br>
+        <mat-form-field>
+            <textarea rows="13"
+            matInput
+            ngModel
+          
+            name="description"
+            placeholder="Enter Blog Description"
+            #description="ngModel"
+          required
+       ></textarea>
+       <div *ngIf="description errors['required']"></div>
+        </mat-form-field>
+
+        <button class="btn1 btncan"
+        mat-raised-button
+        color="accent">cancel</button>
+
+        <button class="btn btnpost"
+        mat-raised-button
+        color="primary" 
+        type="submit">Post</button>
+        </form>
+       
+        </mat-card>
+        <!-- <app-manage-blog></app-manage-blog> -->
+
+       
+     
+
+    
+
+<!-- <mat-card>
+    <form >
+        <mat-form-field>
+            <input type="text"
+            matInput 
+            name="title" placeholder="Blog-Title">
+        </mat-form-field>
+        <mat-form-field>
+            <textarea rows="10" 
+            matInput 
+            name="content" placeholder="Blog content"></textarea>
+        </mat-form-field>
+     
+    </form>
+    <button mat-raised-button color="primary" type="submit">Save Blog</button>
+
+<router-outlet></router-outlet> -->
